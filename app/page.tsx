@@ -9,21 +9,6 @@ import { fetchCars } from '@/utils';
 import Image from 'next/image';
 
 export default async function Home({ searchParams }: HomeProps) {
-  // Set the required headers for the API request
-  // const response = await fetch(
-  //   `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,
-  //   {
-  //     headers: headers,
-  //   }
-  // );
-  // const allCars = await fetchCars({
-  //   manufacturer: searchParams.manufacturer || '',
-  //   year: searchParams.year || 2022,
-  //   fuel: searchParams.fuel || '',
-  //   limit: searchParams.limit || 10,
-  //   model: searchParams.model || '',
-  // });
-
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     year: searchParams.year || 2022,
